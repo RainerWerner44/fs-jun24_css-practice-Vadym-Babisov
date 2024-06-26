@@ -3,7 +3,6 @@ body {
 }
 
 .content {
-  flex-wrap: wrap;
   grid-template-columns: repeat(2, 200px);
   justify-content: center;
   gap: 40px 30px;
@@ -20,7 +19,8 @@ body {
 
 .person {
   width: fit-content;
-  transition: transform 1s;
+  transition: transform 1s 1s;
+  position: relative;
 }
 
 .person-container {
@@ -30,21 +30,218 @@ body {
   display: flex;
 }
 
-.person:hover {
-  background-color: #dadada;
-  border-radius: 8px;
-  padding: 10px 10px 0;
-  transform: scale(1.17);
+.person-container:hover {
+  background-color: #e4e4e4;
 }
 
-.person:hover .extra {
-  opacity: 1;
-  visibility: visible;
-  position: static;
+.person:hover {
+  z-index: 4;
+  row-gap: 10px;
+  transform: scale(1.17);
 }
 
 .person:hover .image {
   border-radius: 12.5%;
+}
+
+.person--1:hover:after {
+  content: "Boxing, $285M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--2:hover:after {
+  content: "Football, $111M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--3:hover:after {
+  content: "Football, $108M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--4:hover:after {
+  content: "Mixed Artial Arts, $99M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--5:hover:after {
+  content: "Football, $90M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--6:hover:after {
+  content: "Basketball, $85.5M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--7:hover:after {
+  content: "Tennis, $77.2M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--8:hover:after {
+  content: "Basketball, $76.9M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--9:hover:after {
+  content: "American Football, $67.3M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
+}
+
+.person--10:hover:after {
+  content: "American Football, $59.5M";
+  color: #000;
+  z-index: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: #e4e4e4;
+  justify-content: center;
+  align-items: end;
+  width: 220px;
+  height: 287px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 36px;
+  display: flex;
+  position: absolute;
+  top: -7%;
+  left: -5%;
 }
 
 .people {
@@ -52,6 +249,7 @@ body {
 }
 
 .container {
+  z-index: 1;
   border-radius: 50%;
   width: 200px;
   height: 200px;
@@ -61,10 +259,12 @@ body {
 .image {
   border-radius: 50%;
   width: 100%;
+  transition-delay: 1s;
 }
 
 .rank {
   color: #8b0000;
+  z-index: 2;
   background-color: #fff;
   border-radius: 50%;
   justify-content: center;
@@ -85,20 +285,23 @@ body {
   line-height: 23px;
 }
 
+.photo {
+  z-index: 3;
+}
+
 .details {
   text-align: center;
+  z-index: 3;
 }
 
 .extra {
   text-align: center;
   color: #000;
   opacity: 0;
-  visibility: hidden;
   margin-top: 9px;
   font-family: Arial;
   font-size: 18px;
   line-height: 20.7px;
-  transition: opacity .3s, visibility .3s;
-  position: absolute;
+  display: none;
 }
 /*# sourceMappingURL=index.b1276d39.css.map */
