@@ -1,6 +1,5 @@
 $desktop-min-width: 1000px;
 
-
 @mixin on-desktop {
   @media (min-width: $desktop-min-width) {
     @content;
@@ -46,11 +45,6 @@ body {
     border-radius: 8px;    
     transform: scale(1.17);    
   } 
-
-  
-
-
- 
 
   &:hover .extra {
     opacity: 1;
