@@ -15,7 +15,7 @@ body {
   display: grid;
   column-gap: 30px;
   row-gap: 40px;
-  flex-wrap: wrap;
+
   justify-content: center;
 
   grid-template-columns: repeat(2, 200px);
@@ -26,36 +26,72 @@ body {
   }
 }
 
-.person {  
+.person {
   width: fit-content;
-  transition: transform 1s;
+  transition: transform 1s ease;
+  transition-delay: 1s;
+  position: relative;
   
-  &-container{
+
+  &-container {
     display: flex;
     justify-content: center;
-    flex-direction: column;  
-    row-gap: 8px; 
-
+    flex-direction: column;
+    row-gap: 8px;
+   
+    &:hover {
+      background-color: rgb(228, 228, 228);
+    }
   }
 
-  &:hover{
+  &:hover {
+        row-gap: 10px;
+    transform: scale(1.17);
+    z-index: 4;
+      }
+
+      &:hover .image{
+        border-radius: 12.5%;
+      }
+    
+$contents: (
+  'Boxing, $285M',
+  'Football, $111M',
+  'Football, $108M',
+  'Mixed Artial Arts, $99M',
+  'Football, $90M',
+  'Basketball, $85.5M',
+  'Tennis, $77.2M',
+  'Basketball, $76.9M',
+  'American Football, $67.3M',
+  'American Football, $59.5M',
   
-    padding: 10px 10px 0;    
-    background-color: rgb(218, 218, 218);
-    border-radius: 8px;    
-    transform: scale(1.17);    
-  } 
+);
 
-  &:hover .extra {
-    opacity: 1;
-    visibility: visible;
-    position: static;
-  }
+@for $i from 1 through 10{
 
-  &:hover .image{
-    border-radius: 12.5%;
+  &--#{$i}:hover::after {
+    content: nth($contents, $i);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: black;
+    width: 220px;
+    height: 287px;
+    background-color: rgb(228, 228, 228);
+    position: absolute;
+    top: -7%;
+    left: -5%;
+    z-index: 0;
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    z-index: 2;  
   }
- 
+}
+
+
 }
 
 .people {
@@ -68,11 +104,19 @@ body {
   height: 200px;
   border-radius: 50%;
   position: relative;
+  z-index: 1;
+
+
 }
+
+
+
 
 .image {
   width: 100%;
   border-radius: 50%;
+  transition-delay: 1s;
+
 }
 
 .rank {
@@ -85,6 +129,7 @@ body {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 
   top: 40%;
   right: 5%;
@@ -99,8 +144,13 @@ body {
   color: #2F4F4F;
 }
 
+.photo{
+  z-index: 3;
+}
+
 .details {
   text-align: center;
+  z-index: 3;
 }
 
 .extra {
@@ -111,11 +161,5 @@ body {
   color: #000;
   margin-top: 9px;
   opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  
-
+  display: none;
 }
-
-
