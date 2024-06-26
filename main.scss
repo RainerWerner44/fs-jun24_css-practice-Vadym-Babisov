@@ -27,27 +27,35 @@ body {
   }
 }
 
-.person {
+.person {  
   width: fit-content;
   transition: transform 1s;
+  
   &-container{
     display: flex;
     justify-content: center;
     flex-direction: column;  
     row-gap: 8px; 
+
   }
 
-  &:hover {
+  &:hover{
+  
+    padding: 10px 10px 0;    
     background-color: rgb(218, 218, 218);
-    border-radius: 8px;
-    padding: 12px 10px 16px;
-    transform: scale(1.17);
-   
-    box-sizing: border-box;
-  }
+    border-radius: 8px;    
+    transform: scale(1.17);    
+  } 
+
+  
+
+
+ 
 
   &:hover .extra {
-   display: block;
+    opacity: 1;
+    visibility: visible;
+    position: static;
   }
 
   &:hover .image{
@@ -108,8 +116,10 @@ body {
   text-align: center;
   color: #000;
   margin-top: 9px;
-  display: none;
- 
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   
 
 }
