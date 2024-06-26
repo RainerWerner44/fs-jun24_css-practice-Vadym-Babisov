@@ -37,13 +37,6 @@ body {
   transform: scale(1.17);
 }
 
-.person:hover:after {
-  content: "Boxing 285";
-  background-color: #dadada;
-  border-radius: 8px;
-  padding: 10px 10px 0;
-}
-
 .person:hover .extra {
   opacity: 1;
   visibility: visible;
